@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RTU Program Needs Poll</title>
+<meta name="description" content="Rate eleven proposed academic programs at Rizal Technological University. Brought to you by the Data Science and Smart Analytics Research Center.">
+<meta property="og:title" content="Your Voice Matters! Help Shape the Future of Education at RTU">
+<meta property="og:description" content="Rate eleven proposed academic programs at Rizal Technological University.">
+<meta property="og:image" content="assets/rtu-seal.png">
+<link rel="icon" href="assets/rtu-seal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logos">
+        <img class="logo" src="assets/rtu-seal.png" alt="Rizal Technological University seal" width="112" height="112">
+        <img class="logo ds" src="assets/dssarc-logo.png" alt="Data Science and Smart Analytics Research Center logo" width="112" height="112">
+      </div>
+      <div class="byline"><span class="eyebrow">Rizal Technological University · Program Needs Poll</span>
+        <span>Brought to you by the <strong>Data Science and Smart Analytics Research Center</strong></span></div>
+    </div>
+    <h1>Your Voice Matters! Help Shape the Future of Education at RTU 🎓✨</h1>
+    <div class="intro">
+      <p>Rizal Technological University invites you to share your insights on eleven proposed academic programs. We want to know how well these programs answer the changing needs of industry, of our communities, and of the careers our students hope to build.</p>
+      <p>Taking part is simple. For each program, tell us <strong>whether it responds to a real need</strong> and <strong>whether you or someone you know would enroll</strong>. Rate one, several, or all eleven. Every response counts.</p>
+      <p>Together, let's create learning opportunities that are relevant, inclusive, innovative, and responsive to the aspirations of our communities. Be part of shaping RTU's future and take the poll today! 💙💛</p>
+    </div>
+  </header>
+
+  <form id="form" novalidate onsubmit="return false" style="display:flex;flex-direction:column;gap:22px">
+    <div class="field">
+      <label for="role">I am answering as a…</label>
+      <select id="role" name="role" required></select>
+    </div>
+
+    <div>
+      <div class="scale-key" aria-hidden="true"><span>Two questions per program</span><span>1 = lowest · 5 = highest</span></div>
+      <div id="programs"></div>
+    </div>
+
+    <div class="field">
+      <label for="suggest">Another program you'd like to see <span class="hint">(optional)</span></label>
+      <input type="text" id="suggest" maxlength="160" placeholder="e.g. BS Geoinformatics">
+    </div>
+    <div class="field">
+      <label for="comment">Comments <span class="hint">(optional)</span></label>
+      <textarea id="comment" maxlength="1000" placeholder="Why these programs matter to you, your company, or your community"></textarea>
+    </div>
+    <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" tabindex="-1" autocomplete="off"></div>
+
+    <p class="hint" style="margin:0">Your answers are anonymous and are used only by RTU for program planning.</p>
+    <div class="submit-bar">
+      <button class="btn" id="submit" type="button" disabled>Submit ratings</button>
+      <span class="status" id="status" role="status">Choose who you are and rate at least one program.</span>
+    </div>
+  </form>
+
+  <section id="thanks" class="thanks" hidden tabindex="-1">
+    <h2>Thank you! Your ratings are in. 💙💛</h2>
+    <p>Your insights will help RTU plan programs that answer the needs of industry, our communities, and future careers. Please share this poll with classmates, colleagues, and your community.</p>
+    <div><button class="btn ghost" id="edit" type="button">Change my answers</button></div>
+  </section>
+
+  <footer>Rizal Technological University · Data Science and Smart Analytics Research Center — Your partner in providing smart solutions</footer>
+</div>
+<script src="config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
